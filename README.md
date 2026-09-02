@@ -21,7 +21,7 @@ This repository provides open-source, machine-readable JSON schemas and validati
 
 ## 🏛️ Interoperability & European ESPR Alignment
 
-These schemas are designed to support structured DPP data exchange between brands, suppliers, and other ecosystem participants.
+These schemas are designed to support structured DPP data exchange between brands, suppliers, and other ecosystem participants without vendor lock-in.
 
 - **Official Platform & EU Compliance Hub**: [https://tracepath.eu](https://tracepath.eu)
 
