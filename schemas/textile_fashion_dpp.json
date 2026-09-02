@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TracePath Open Digital Product Passport Schema - Textiles & Apparel",
+  "description": "Machine-readable Open Standard DPP Schema aligned with EU ESPR 2027 regulations for fashion, garments, and textiles.",
+  "type": "object",
+  "required": [
+    "dpp_id",
+    "gtin",
+    "sku",
+    "product_name",
+    "brand_name",
+    "material_composition",
+    "country_of_origin"
+  ],
+  "properties": {
+    "dpp_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Cryptographic unique identifier for the published DPP."
+    },
+    "gtin": {
+      "type": "string",
+      "pattern": "^[0-9]{13,14}$",
+      "description": "GS1 GTIN-13 or GTIN-14 barcode identifier."
+    },
+    "gs1_digital_link_uri": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official GS1 Digital Link URI standard (/01/{gtin}/21/{serial})."
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock Keeping Unit identifier."
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "brand_name": {
+      "type": "string"
+    },
+    "country_of_origin": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code."
+    },
+    "material_composition": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "material",
+          "percentage"
+        ],
+        "properties": {
+          "material": {
+            "type": "string"
+          },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "recycled_content": {
+            "type": "boolean"
+          },
+          "certification": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sustainability_metrics": {
+      "type": "object",
+      "properties": {
+        "carbon_footprint_kg_co2e": {
+          "type": "number"
+        },
+        "water_consumption_liters": {
+          "type": "number"
+        },
+        "recyclability_score": {
+          "type": "string"
+        },
+        "microplastic_release_risk": {
+          "type": "string"
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "standard": {
+            "type": "string",
+            "enum": [
+              "GOTS",
+              "OEKO-TEX Standard 100",
+              "GRS",
+              "ISO 14001",
+              "BSCI",
+              "SEDEX"
+            ]
+          },
+          "certificate_number": {
+            "type": "string"
+          },
+          "expiry_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "snapshot_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 cryptographic snapshot hash of immutable passport data."
+    }
+  }
+}

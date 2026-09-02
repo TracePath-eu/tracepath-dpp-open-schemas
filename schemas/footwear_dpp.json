@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TracePath Open Digital Product Passport Schema - Footwear & Leather Goods",
+  "description": "Machine-readable Open Standard DPP Schema aligned with EU ESPR guidelines for shoes, leather goods, and accessories.",
+  "type": "object",
+  "required": [
+    "dpp_id",
+    "gtin",
+    "sku",
+    "product_name",
+    "upper_material",
+    "outsole_material"
+  ],
+  "properties": {
+    "dpp_id": {
+      "type": "string"
+    },
+    "gtin": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "upper_material": {
+      "type": "string"
+    },
+    "lining_material": {
+      "type": "string"
+    },
+    "outsole_material": {
+      "type": "string"
+    },
+    "tannery_certification": {
+      "type": "string",
+      "description": "LWG (Leather Working Group) or equivalent rating"
+    },
+    "repairability_index": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    }
+  }
+}
