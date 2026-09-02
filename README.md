@@ -6,7 +6,7 @@
 
 Welcome to the official **TracePath Open Digital Product Passport (DPP) Schemas** repository.
 
-This repository provides open-source, machine-readable JSON schemas and validation utilities designed to support fashion, textile, and footwear brands preparing for the European Union's **Ecodesign for Sustainable Products Regulation (ESPR)** mandates.
+This repository provides open-source, machine-readable JSON schemas and validation utilities designed to support fashion, apparel, and footwear brands preparing for the European Union's **Ecodesign for Sustainable Products Regulation (ESPR)** mandates.
 
 ---
 
@@ -18,12 +18,12 @@ This repository provides open-source, machine-readable JSON schemas and validati
 
 ---
 
-## 🏛️ Interoperability & CIRPASS-2 Alignment
+## 🏛️ Interoperability & European ESPR Alignment
 
 These schemas are designed for cross-platform data interoperability, allowing brands, suppliers, and regulatory auditors to exchange verified product passport data without vendor lock-in.
 
-- **Primary Commercial Platform**: [TracePath Enterprise SaaS](https://app.tracepath.eu)
-- **Knowledge Portal**: [TracePath EU Compliance Hub](https://tracepath.eu)
+- **Primary Commercial Platform**: [https://app.tracepath.eu](https://app.tracepath.eu)
+- **Knowledge Portal & EU Compliance Hub**: [https://tracepath.eu](https://tracepath.eu)
 
 ---
 
