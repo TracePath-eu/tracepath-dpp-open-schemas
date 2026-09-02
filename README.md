@@ -12,7 +12,7 @@ This repository provides open-source, machine-readable JSON schemas and validati
 
 ## 📦 What's Included
 
-- `schemas/textile_fashion_dpp.json`: Starter JSON schema for fashion, garments, and apparel DPP data points (materials, Scope 1-3 emissions, certifications, REACH compliance).
+- `schemas/textile_fashion_dpp.json`: Starter JSON schema for fashion, garments, and apparel DPP data.
 - `schemas/footwear_dpp.json`: Starter JSON schema for shoes, footwear, and leather goods.
 - `validators/gs1_digital_link_validator.py`: Lightweight Python URI validator for GS1 Digital Link standard URIs (`/01/{gtin}/21/{serial}`).
 - `DISCLAIMER.md`: Regulatory implementation disclaimer.
@@ -21,7 +21,7 @@ This repository provides open-source, machine-readable JSON schemas and validati
 
 ## 🏛️ Interoperability & European ESPR Alignment
 
-These schemas are designed to support structured data exchange between brands, suppliers, and other DPP ecosystem participants without vendor lock-in.
+These schemas are designed to support structured DPP data exchange between brands, suppliers, and other ecosystem participants.
 
 - **Official Platform & EU Compliance Hub**: [https://tracepath.eu](https://tracepath.eu)
 
