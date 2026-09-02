@@ -1,28 +1,43 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "TracePath Open Digital Product Passport Schema - Footwear & Leather Goods",
-  "description": "Machine-readable Open Standard DPP Schema aligned with EU ESPR guidelines for shoes, leather goods, and accessories.",
+  "description": "Machine-readable starter DPP schema for footwear and leather goods, designed for experimentation under the EU ESPR framework.",
   "type": "object",
   "required": [
     "dpp_id",
     "gtin",
     "sku",
     "product_name",
+    "brand_name",
+    "country_of_origin",
     "upper_material",
     "outsole_material"
   ],
   "properties": {
     "dpp_id": {
-      "type": "string"
+      "type": "string",
+      "format": "uuid",
+      "description": "Cryptographic unique identifier for the published DPP."
     },
     "gtin": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^(?:[0-9]{8}|[0-9]{12}|[0-9]{13}|[0-9]{14})$",
+      "description": "GS1 GTIN-8, GTIN-12, GTIN-13, or GTIN-14 barcode identifier."
     },
     "sku": {
-      "type": "string"
+      "type": "string",
+      "description": "Stock Keeping Unit identifier."
     },
     "product_name": {
       "type": "string"
+    },
+    "brand_name": {
+      "type": "string"
+    },
+    "country_of_origin": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code."
     },
     "upper_material": {
       "type": "string"
@@ -40,7 +55,13 @@
     "repairability_index": {
       "type": "number",
       "minimum": 1,
-      "maximum": 10
+      "maximum": 10,
+      "description": "Illustrative TracePath field for pilot use; not an official EU repairability scale."
+    },
+    "snapshot_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 cryptographic snapshot hash of immutable passport data."
     }
   }
 }

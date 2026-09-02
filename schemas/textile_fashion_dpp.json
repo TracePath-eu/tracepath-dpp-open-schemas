@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "TracePath Open Digital Product Passport Schema - Textiles & Apparel",
-  "description": "Machine-readable Open Standard DPP Schema aligned with EU ESPR 2027 regulations for fashion, garments, and textiles.",
+  "description": "Machine-readable starter DPP schema for fashion, garments, and textiles, designed for experimentation under the EU ESPR framework.",
   "type": "object",
   "required": [
     "dpp_id",
@@ -20,8 +20,8 @@
     },
     "gtin": {
       "type": "string",
-      "pattern": "^[0-9]{13,14}$",
-      "description": "GS1 GTIN-13 or GTIN-14 barcode identifier."
+      "pattern": "^(?:[0-9]{8}|[0-9]{12}|[0-9]{13}|[0-9]{14})$",
+      "description": "GS1 GTIN-8, GTIN-12, GTIN-13, or GTIN-14 barcode identifier."
     },
     "gs1_digital_link_uri": {
       "type": "string",
@@ -45,6 +45,7 @@
     },
     "material_composition": {
       "type": "array",
+      "description": "Array of fiber/material components. Note: Total material composition sum should aggregate to 100% in platform validation.",
       "items": {
         "type": "object",
         "required": [
