@@ -1,7 +1,7 @@
 # TracePath Open Digital Product Passport (DPP) Schemas
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![EU ESPR Aligned](https://img.shields.io/badge/EU_ESPR_Framework-Aligned-emerald.svg)](https://tracepath.eu)
+[![EU ESPR Framework](https://img.shields.io/badge/EU_ESPR-Framework-emerald.svg)](https://tracepath.eu)
 [![GS1 Digital Link](https://img.shields.io/badge/GS1-Digital_Link_1.2-green.svg)](https://tracepath.eu)
 
 Welcome to the official **TracePath Open Digital Product Passport (DPP) Schemas** repository.
@@ -19,7 +19,7 @@ This repository provides open-source, machine-readable JSON schemas and validati
 
 ---
 
-## 🏛️ Interoperability & European ESPR Alignment
+## 🏛️ Interoperability & EU ESPR Framework
 
 These schemas are designed to support structured DPP data exchange between brands, suppliers, and other ecosystem participants without vendor lock-in.
 
